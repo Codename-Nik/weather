@@ -1,0 +1,96 @@
+.tableContainer {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.weatherTable {
+  width: 100%;
+  min-width: 600px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+
+  th, td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid var(--bs-gray-200);
+  }
+
+  th {
+    background-color: var(--bs-primary);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+
+  tr:nth-child(even) {
+    background-color: var(--bs-gray-50);
+  }
+
+  tr:hover {
+    background-color: var(--bs-gray-100);
+  }
+
+  .weatherIcon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .minTemp {
+    color: var(--bs-info);
+    font-weight: 500;
+  }
+
+  .maxTemp {
+    color: var(--bs-danger);
+    font-weight: 500;
+  }
+
+  .weatherDescription {
+    text-align: left;
+    padding-left: 1.5rem;
+  }
+}
+
+// Адаптивные стили
+@media (max-width: 768px) {
+  .tableContainer {
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+  }
+
+  .weatherTable {
+    font-size: 0.85rem;
+
+    th, td {
+      padding: 0.75rem 0.5rem;
+    }
+
+    .weatherDescription {
+      padding-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .weatherTable {
+    th, td {
+      padding: 0.5rem 0.25rem;
+    }
+    
+    .weatherDescription {
+      max-width: 100px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-left: 0.5rem;
+    }
+  }
+}
