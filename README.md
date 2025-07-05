@@ -16,26 +16,24 @@
  
 # Установка и запуск
 Клонировать репозиторий:
-``
 bash
+``
 git clone [URL репозитория]
 ``
 # Установить зависимости:
-``
 bash
+``
 npx create-next-app@latest --typescript
 npm install react-bootstrap bootstrap sass
 ``
 # Запустить приложение в режиме разработки:
-``
 bash
+``
 npm run dev
 ``
 # Открыть в браузере:
-text
 http://localhost:3000
 # Структура проекта
-text
 ```
 src/
 ├── app/                # Роутинг приложения
